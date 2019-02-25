@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        div.scene {
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: auto;
+        }
+        div.croppedImage {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 250px;
+            height: 250px;
+            margin: 0px 20px;
+        }
+        div.content {
+            width: 500px;
+        }
+        div.sceneLeft div.croppedImage,
+        div.sceneRight div.content {
+            float: right;
+        }
+        div.sceneRight div.croppedImage,
+        div.sceneLeft div.content {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="scene1" class="scene sceneLeft">
+        <div class="croppedImage" style="background-image: url('images/photo01.jpg')"></div>
+        <div class="content">
+            <h1>Phasellus imperdiet dolor egestas dictum vehicula.</h1>
+            <p>Suspendisse rutrum in purus vitae lacinia. Praesent facilisis vestibulum vulputate. Vivamus lobortis vel dolor fringilla porta. Mauris eleifend placerat justo in maximus. Phasellus et ipsum sed dolor luctus ultrices eu et ligula. Nulla facilisi. Vestibulum lacinia nibh sed interdum feugiat. Nunc varius condimentum vestibulum. In a sagittis lorem, vel tincidunt nisl. Curabitur quis feugiat est. Fusce sit amet lorem ac arcu efficitur sodales vitae blandit lorem.</p>
+        </div>
+    </div>
+    <div id="scene2" class="scene sceneRight">
+        <div class="croppedImage" style="background-image: url('images/photo02.jpg')"></div>
+        <div class="content">
+            <h1>Maecenas tempus sollicitudin libero ut posuere.</h1>
+            <p>Etiam a felis arcu. Mauris feugiat, orci commodo sollicitudin accumsan, diam ex vestibulum metus, quis ullamcorper nibh dui et felis. Maecenas eu nisl nec nulla suscipit bibendum ut ultrices odio. Praesent rutrum semper risus, vitae egestas enim porta vel. Phasellus vel elit placerat urna tincidunt egestas et id urna. Duis tempus, purus in rhoncus consectetur, eros dui euismod sapien, vel iaculis justo justo a tellus. Pellentesque bibendum, urna eu eleifend vulputate, leo est tincidunt mauris, ac ultricies nunc libero quis velit.</p>
+        </div>
+    </div>
+    <div id="scene3" class="scene sceneLeft">
+        <div class="croppedImage" style="background-image: url('images/photo03.jpg')"></div>
+        <div class="content">
+            <h1>Pellentesque sed lorem diam.</h1>
+            <p>Vestibulum dolor nisl, blandit vitae eleifend sit amet, consequat at leo. Nam vulputate placerat nisi, vel hendrerit sapien condimentum ut. Integer malesuada a ipsum vitae commodo. Mauris quis odio ullamcorper, euismod quam id, dictum sem. Nullam nec diam diam. Ut sagittis libero non purus vestibulum, eu rhoncus mauris condimentum. Nullam odio orci, suscipit nec tristique eget, venenatis ac ex. Nulla venenatis, libero a tempor sollicitudin, diam odio gravida neque, in feugiat libero est sit amet massa.</p>
+        </div>
+    </div>
+    <div id="scene4" class="scene sceneRight">
+        <div class="croppedImage" style="background-image: url('images/photo04.jpg')"></div>
+        <div class="content">
+            <h1>Vivamus porta tempus augue quis rutrum.</h1>
+            <p>Vivamus risus tortor, laoreet a libero pulvinar, dignissim gravida risus. Aliquam vel efficitur velit. Sed pretium nunc in lorem varius porta. Nulla facilisi. Sed ultrices tellus nibh, et laoreet massa bibendum quis. Proin ultrices venenatis eleifend. Maecenas mauris nunc, auctor at posuere a, tincidunt non risus. Maecenas sit amet eros at turpis auctor lacinia ut et elit. Donec in sagittis erat. Morbi a mi tortor. Nunc venenatis enim purus, eget dignissim urna rhoncus id. Nulla diam dolor, laoreet ut dui non, pellentesque consectetur erat.</p>
+        </div>
+    </div>
+</body>
+</html>
