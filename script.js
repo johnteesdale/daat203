@@ -8,6 +8,7 @@ var copy = ["Suspendisse rutrum in purus vitae lacinia. Praesent facilisis vesti
             "Vivamus risus tortor, laoreet a libero pulvinar, dignissim gravida risus. Aliquam vel efficitur velit. Sed pretium nunc in lorem varius porta. Nulla facilisi. Sed ultrices tellus nibh, et laoreet massa bibendum quis. Proin ultrices venenatis eleifend. Maecenas mauris nunc, auctor at posuere a, tincidunt non risus. Maecenas sit amet eros at turpis auctor lacinia ut et elit. Donec in sagittis erat. Morbi a mi tortor. Nunc venenatis enim purus, eget dignissim urna rhoncus id. Nulla diam dolor, laoreet ut dui non, pellentesque consectetur erat."];
 var image = ["images/photo01.jpg", "images/photo02.jpg", "images/photo03.jpg", "images/photo04.jpg"];
 var position = ["left", "right", "left", "right"];
+var randomizer = [0,1,2,3];
 
 
 //shuffle function
@@ -31,15 +32,13 @@ function shuffle(array) {
 }
 
 //Shuffling the order of arrays
-headers = shuffle(headers);
-copy = shuffle(copy);
-image = shuffle(image);
-position = shuffle(position);
+randomizer = shuffle(randomizer);
 
 //My Function
-function myF(h, c, i, p) {
+function myF(h, c, i, p, x) {
   //Variable Creation Section
   var y = 0;
+  console.log(x[y]);
   var headerContent;
   var copyContent;
   var imgAttribute;
@@ -56,22 +55,23 @@ function myF(h, c, i, p) {
 
   while (y<4){
     //document.write("1");
+    var n = x[y];
     var header = document.createElement("h1");
     var copy = document.createElement("p");
     var img = document.createElement("img");
     var div = document.createElement("div");
-    headerContent = document.createTextNode(h[y]);
-    copyContent = document.createTextNode(c[y]);
+    headerContent = document.createTextNode(h[n]);
+    copyContent = document.createTextNode(c[n]);
     header.appendChild(headerContent);
     copy.appendChild(copyContent);
     document.body.appendChild(div);
     div.setAttribute("id", y);
-    div.setAttribute("class", "text" + " " + p[y]);
+    div.setAttribute("class", "text" + " " + p[n]);
     document.getElementById(y).appendChild(header);
     document.getElementById(y).appendChild(copy);
     document.body.appendChild(img);
-    img.setAttribute("class", p[y]);
-    img.setAttribute("src", i[y]);
+    img.setAttribute("class", p[n]);
+    img.setAttribute("src", i[n]);
     y++;
     console.log(y);
   };
